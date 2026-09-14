@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loopi Makarna | Her alışverişten bir iyilik</title>
+  <meta name="description" content="Loopi Makarna; tarhana, erişte, reçel ve geleneksel lezzetleri iyilik kampanyalarıyla buluşturan sosyal fayda odaklı alışveriş deneyimi." />
+  <meta property="og:title" content="Loopi Makarna | Her alışverişten bir iyilik" />
+  <meta property="og:description" content="Sofrana gelen lezzet, seçtiğin kampanyaya katkıya dönüşsün." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/hero-onayli.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/webp" href="assets/iyilik-mutfagi-logo.webp" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement">Loopi Makarna, KDV hariç ve indirim sonrası ürün tutarının %10’unu kendi gelirinden sosyal faydaya ayırır. ♡</div>
+  <header class="header">
+    <div class="container nav-row">
+      <button id="menuBtn" type="button" hidden aria-hidden="true" tabindex="-1"></button>
+      <a class="brand" href="#top" aria-label="Loopi Makarna ana sayfa"><img class="brand-logo" src="assets/iyilik-mutfagi-logo.webp" alt="Loopi Makarna logosu" /></a>
+      <nav class="mobile-nav" id="mobileNav"><div class="inline-products-menu"><button class="inline-products-toggle" id="inlineProductsToggle" type="button" aria-expanded="false" aria-controls="inlineProductsSubmenu">Ürünler<i aria-hidden="true"></i></button><div class="inline-products-submenu" id="inlineProductsSubmenu" hidden><a href="#urunler" data-product-query="Tarhana">Tarhana</a><a href="#urunler" data-product-query="Erişte">Erişte</a><a href="#urunler" data-product-query="Salça">Salça</a><a href="#urunler" data-product-query="Reçel">Reçel</a><a href="#urunler" data-product-query="Tahin">Tahin & Pekmez</a><a href="#urunler">Diğer Lezzetler</a></div></div><a href="#kurumsal">Kurumsal</a><a href="#kampanyalar">Etkimiz</a><a href="#hikaye">Hikâyemiz</a><button class="nav-good-btn mobile-good-btn" id="mobileGoodHistoryBtn" type="button">İyiliklerim</button><a class="nav-faq-link" href="#sss">Sık Sorulanlar</a><a class="nav-subscription-link" href="#abonelik">İyilik Kutusu Aboneliği</a><button class="nav-good-btn mobile-login-btn" id="mobileLoginBtn" type="button">Giriş Yap</button><button class="nav-good-btn mobile-member-btn" id="mobileMemberBtn" type="button">Üye Ol</button></nav>
+      <nav class="desktop-nav">
+        <div class="products-nav-wrap">
+          <a class="products-nav-btn" id="productsNavBtn" href="#urunler" role="button" aria-expanded="false" aria-controls="productsMega">Ürünler <span>⌄</span></a>
+          <div class="mega-menu" id="productsMega" aria-label="Ürün kategorileri">
+            <a class="mega-col" href="#urunler" data-product-query="Tarhana"><img src="assets/cat-tarhana.webp" alt="Tarhana"><strong>Tarhana</strong><span>Klasik Tarhana</span><span>Sebzeli Tarhana</span><span>Kepekli Tarhana</span></a>
+            <a class="mega-col" href="#urunler" data-product-query="Erişte"><img src="assets/cat-eriste.webp" alt="Erişte"><strong>Erişte</strong><span>Sade Erişte</span><span>Sebzeli Erişte</span><span>Tam Buğday Erişte</span></a>
+            <a class="mega-col" href="#urunler" data-product-query="Salça"><img src="assets/cat-salca.webp" alt="Salça"><strong>Salça</strong><span>Domates Salçası</span><span>Biber Salçası</span><span>Karışık Salça</span></a>
+            <a class="mega-col" href="#urunler" data-product-query="Reçel"><img src="assets/cat-recel.webp" alt="Reçel"><strong>Reçel</strong><span>Çilek Reçeli</span><span>İncir Reçeli</span><span>Kayısı Reçeli</span></a>
+            <a class="mega-col" href="#urunler" data-product-query="Tahin"><img src="assets/cat-tahin.webp" alt="Tahin"><strong>Tahin & Pekmez</strong><span>Tahin</span><span>Üzüm Pekmezi</span><span>Keçiboynuzu Pekmezi</span></a>
+            <a class="mega-col mega-more" href="#urunler"><div class="mega-more-icon">🌿</div><strong>Diğer Lezzetler</strong><span>Turşu</span><span>Zeytinyağı</span><span>Kuru Sebzeler</span><span>Baharatlar</span></a>
+          </div>
+        </div>
+        <a href="#kurumsal">Kurumsal</a><a href="#kampanyalar">Etkimiz</a><a href="#hikaye">Hikâyemiz</a><button class="nav-good-btn" id="goodHistoryBtn" type="button">İyiliklerim</button><a class="nav-faq-link" href="#sss">Sık Sorulanlar</a><a class="nav-subscription-link" href="#abonelik">İyilik Kutusu Aboneliği</a>
+      </nav>
+      <label class="search desktop-search">⌕<input id="searchDesktop" placeholder="Ürün ara..." /></label>
+      <div class="auth-actions"><button class="login-btn" id="loginBtn" type="button">Giriş Yap</button><button class="member-btn" id="memberBtn" type="button">Üye Ol</button></div>
+      <button class="bag-btn" id="bagBtn" type="button" aria-label="Sepeti aç">
+        <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.1 9.1a2 2 0 0 0 1.95 1.55h7.9a2 2 0 0 0 1.93-1.48L20.5 7H6.2"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg>
+        <span id="bagCount" class="count hidden">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero-carousel" aria-label="Öne çıkan ürünler">
+      <div class="hero-slider" id="heroSlider">
+        <article class="hero-slide active" style="--hero-image:url('assets/hero-tarhana.webp')" data-name="Tarhana">
+          <div class="container hero-slide-inner"><div class="hero-slide-copy"><span class="hero-kicker">GELENEKSEL LEZZET</span><h1>Anadolu’nun lezzetiyle<br><em>iyilik büyüsün...</em></h1><p>Doğal, katkısız, ev yapımı tarhanayla sofrana sıcaklık; alışverişinle iyiliğe katkı.</p><a class="hero-cta" href="#urunler">Tarhanayı Keşfet <b>→</b></a></div></div>
+        </article>
+        <article class="hero-slide" style="--hero-image:url('assets/hero-eriste.webp')" data-name="Erişte">
+          <div class="container hero-slide-inner"><div class="hero-slide-copy"><span class="hero-kicker">EV YAPIMI</span><h1>Sofranın klasiği<br><em>erişteyle buluşsun.</em></h1><p>Sade ve sebzeli erişte çeşitleri; geleneksel tariflerle hazırlanmış gerçek ev lezzeti.</p><a class="hero-cta" href="#urunler">Erişteyi Keşfet <b>→</b></a></div></div>
+        </article>
+        <article class="hero-slide" style="--hero-image:url('assets/hero-salca.webp')" data-name="Salça">
+          <div class="container hero-slide-inner"><div class="hero-slide-copy"><span class="hero-kicker">KAVANOZDA YAZ LEZZETİ</span><h1>Yemeğin ruhu<br><em>ev yapımı salça.</em></h1><p>Yoğun kıvamlı domates ve biber salçalarıyla sofrana doğal, güçlü bir lezzet kat.</p><a class="hero-cta" href="#urunler">Salçayı Keşfet <b>→</b></a></div></div>
+        </article>
+        <article class="hero-slide" style="--hero-image:url('assets/hero-recel.webp')" data-name="Reçel">
+          <div class="container hero-slide-inner"><div class="hero-slide-copy"><span class="hero-kicker">KAHVALTININ EN TATLI HALİ</span><h1>Mevsim meyveleri<br><em>iyiliğe dönüşsün.</em></h1><p>Küçük partilerde hazırlanan ev yapımı reçeller; kahvaltı sofralarına doğal bir dokunuş.</p><a class="hero-cta" href="#urunler">Reçelleri Keşfet <b>→</b></a></div></div>
+        </article>
+        <article class="hero-slide" style="--hero-image:url('assets/hero-tahin.webp')" data-name="Tahin">
+          <div class="container hero-slide-inner"><div class="hero-slide-copy"><span class="hero-kicker">KAHVALTILIK</span><h1>İyi susamdan<br><em>iyi tahin çıkar.</em></h1><p>Kıvamı yoğun, tadı sade tahin ve pekmez çeşitleriyle güne doğal bir başlangıç.</p><a class="hero-cta" href="#urunler">Tahin & Pekmezi Keşfet <b>→</b></a></div></div>
+        </article>
+      </div>
+      <button class="hero-arrow hero-prev" id="heroPrev" type="button" aria-label="Önceki ürün">‹</button>
+      <button class="hero-arrow hero-next" id="heroNext" type="button" aria-label="Sonraki ürün">›</button>
+      <div class="hero-dots" id="heroDots" aria-label="Banner sayfaları"></div>
+    </section>
+
+    <section class="container benefits">
+      <article class="card"><span>🚚</span><strong>Hızlı Teslimat</strong><small>Özenle paketlenir</small></article>
+      <article class="card"><span>🌿</span><strong>Doğal Seçimler</strong><small>İçeriği sade ürünler</small></article>
+      <article class="card"><span>♥</span><strong>%10 İyilik Payı</strong><small>Müşteriden ayrıca tahsil edilmez</small></article>
+      <article class="card"><span>🎁</span><strong>Hediye Hazır</strong><small>Notunla gönder</small></article>
+    </section>
+
+    <section class="shop-section" id="urunler">
+      <div class="container shop-breadcrumb">Ana Sayfa <span>›</span> Dükkan</div>
+      <div class="shop-hero">
+        <div class="container shop-hero-inner">
+          <div class="shop-title shop-brand-title"><img src="assets/iyilik-mutfagi-logo.webp" alt="Loopi Makarna"><div><h2>Loopi Makarna</h2><p>İyilik sofrada başlar.</p></div></div>
+          <div class="shop-hero-message"><strong>Doğal Lezzetler</strong><span>Daha İyi Yarınlar ♡</span></div>
+        </div>
+      </div>
+      <div class="container shop-layout">
+        <aside class="shop-sidebar">
+          <div class="shop-filter-block"><h3>Kategori</h3><label><input type="radio" name="shopCat" value="Tümü" checked> Tüm Ürünler</label><label><input type="radio" name="shopCat" value="Tarhana"> Tarhana</label><label><input type="radio" name="shopCat" value="Erişte"> Erişte</label><label><input type="radio" name="shopCat" value="Salça"> Salça</label><label><input type="radio" name="shopCat" value="Reçel"> Reçel</label><label><input type="radio" name="shopCat" value="Tahin & Pekmez"> Tahin & Pekmez</label><label><input type="radio" name="shopCat" value="Diğer Lezzetler"> Diğer Lezzetler</label></div>
+          <div class="shop-filter-block"><h3>Fiyat Aralığı</h3><input id="shopPrice" class="shop-range" type="range" min="50" max="500" value="500" step="10"><div class="shop-range-label"><span>50 TL</span><span id="shopPriceLabel">500 TL</span></div></div>
+          <div class="shop-filter-block"><h3>Gramaj</h3><label><input type="radio" name="shopGram" value="Tümü" checked> Tümü</label><label><input type="radio" name="shopGram" value="250"> 250 g</label><label><input type="radio" name="shopGram" value="380"> 380 g</label><label><input type="radio" name="shopGram" value="500"> 500 g</label><label><input type="radio" name="shopGram" value="650"> 650 g+</label></div>
+          <div class="shop-filter-block"><h3>Öne Çıkanlar</h3><label><input type="checkbox" id="filterDiscount"> İndirimli Ürünler</label><label><input type="checkbox" id="filterNew"> Yeni Ürünler</label><label><input type="checkbox" id="filterBest"> En Çok Satanlar</label></div>
+          <button class="shop-clear" id="shopClear" type="button">↻ Filtreleri Temizle</button>
+        </aside>
+        <div class="shop-main">
+          <div class="shop-toolbar"><strong><span id="shopCount">0</span> ürün listeleniyor</strong><div class="shop-toolbar-actions"><label class="shop-search">⌕ <input id="searchMobile" placeholder="Dükkanda ara..."></label><select id="shopSort"><option value="recommended">Önerilen Sıralama</option><option value="priceAsc">Fiyat: Artan</option><option value="priceDesc">Fiyat: Azalan</option><option value="name">İsme Göre</option></select><button class="shop-view active" type="button">▦</button></div></div>
+          <div class="shop-product-grid" id="productGrid"></div>
+        </div>
+      </div>
+      <div class="container shop-values"><div><span>♧</span><b>Yerel Lezzetler</b><small>Anadolu’nun eşsiz tatları</small></div><div><span>♙</span><b>Kadın Üreticileri Destekliyoruz</b><small>Daha güçlü yarınlar için</small></div><div><span>♧</span><b>Doğal ve Katkısız</b><small>Güvenle sofranıza</small></div><div><span>♡</span><b>Her Alışveriş Bir İyilik</b><small>Daha güzel bir gelecek için</small></div></div>
+    </section>
+
+    <section class="subscription-section" id="abonelik"><div class="container"><div class="subscription-head"><div><span class="eyebrow">HER AY LEZZET, HER AY İYİLİK</span><h2>İyilik Kutusu aboneliği</h2><p>Anadolu lezzetleri düzenli olarak kapına gelsin; her teslimatta KDV hariç ürün tutarının %10’u Loopi Makarna tarafından seçtiğin kampanyaya ayrılsın. İstediğin zaman duraklat veya iptal et.</p></div><div class="subscription-impact"><strong>12 ay</strong><span>düzenli iyilik<br>ve üretici desteği</span></div></div><div class="subscription-grid"><article class="subscription-card" data-plan="mini" data-price="749"><span class="subscription-frequency">AYLIK</span><h3>Başlangıç Kutusu</h3><p class="subscription-price"><b>749 TL</b><small>/ teslimat</small></p><ul><li>3 mevsimlik yerel ürün</li><li>68,09 TL tahmini iyilik payı</li><li>Standart teslimat dahil</li></ul><button class="btn soft subscription-select" type="button">Bu planı seç</button></article><article class="subscription-card featured" data-plan="standard" data-price="1099"><span class="subscription-badge">EN ÇOK TERCİH EDİLEN</span><span class="subscription-frequency">AYLIK</span><h3>Anadolu İyilik Kutusu</h3><p class="subscription-price"><b>1.099 TL</b><small>/ teslimat</small></p><ul><li>5 seçili yerel ürün</li><li>99,91 TL tahmini iyilik payı</li><li>Sürpriz üretici hikâyesi</li></ul><button class="btn primary subscription-select" type="button">Bu planı seç</button></article><article class="subscription-card" data-plan="family" data-price="1499"><span class="subscription-frequency">AYLIK</span><h3>Aile Sofrası Kutusu</h3><p class="subscription-price"><b>1.499 TL</b><small>/ teslimat</small></p><ul><li>7 aile boyu yerel ürün</li><li>136,27 TL tahmini iyilik payı</li><li>Ücretsiz teslimat</li></ul><button class="btn soft subscription-select" type="button">Bu planı seç</button></article></div><div class="subscription-calculator"><div><span class="eyebrow">YILLIK ETKİN</span><h3>Aboneliğin ne kadar iyilik üretir?</h3></div><label>Plan<select id="subscriptionPlanSelect"><option value="749">Başlangıç · 749 TL</option><option value="1099" selected>Anadolu İyilik · 1.099 TL</option><option value="1499">Aile Sofrası · 1.499 TL</option></select></label><label>Sıklık<select id="subscriptionFrequency"><option value="12">Her ay</option><option value="6">İki ayda bir</option></select></label><div><small>12 AYLIK TAHMİNİ İYİLİK PAYI</small><strong id="subscriptionYearlyImpact">1.198,91 TL</strong><span id="subscriptionYearlySpend">13.188 TL yıllık alışveriş</span></div></div><div class="subscription-note"><b>Kontrol sende.</b><span>Bir sonraki hazırlık tarihinden 3 gün öncesine kadar duraklatabilir, yeniden başlatabilir veya iptal edebilirsin.</span><button class="btn primary" id="subscriptionGeneralBtn" type="button">Aboneliği başlat</button></div></div></section>
+
+    <section class="corporate-section" id="kurumsal">
+      <div class="container">
+        <div class="corporate-head">
+          <div><span class="eyebrow">ŞİRKETİNİZDEN BİR HEDİYE, SOFRALARA BİR İYİLİK</span><h2>Kurumsal İyilik Kutuları</h2><p>Çalışanlarınıza ve iş ortaklarınıza Anadolu’nun yerel lezzetlerini hediye edin. Her kutuda KDV hariç ve indirim sonrası ürün tutarının %10’u Loopi Makarna tarafından seçtiğiniz sosyal fayda kampanyasına ayrılsın.</p></div>
+          <div class="corporate-impact-seal"><strong>%10</strong><span>ölçülebilir<br>iyilik payı</span></div>
+        </div>
+        <div class="corporate-box-grid">
+          <article class="corporate-box" data-box="Sofra Başlangıç Kutusu" data-price="790"><div class="corporate-box-media corporate-box-media-starter"><span>25+ ADET</span></div><div class="corporate-box-body"><div class="corporate-box-top"><small>3 YEREL LEZZET</small><strong>790 TL’den</strong></div><h3>Sofra Başlangıç Kutusu</h3><p>Tarhana, ev eriştesi ve mevsim reçeli. Samimi ekip teşekkürleri ve etkinlik hediyeleri için.</p><ul><li>Kişiye özel hediye notu</li><li>İyilik payı kartı</li><li>Tek adrese toplu teslimat</li></ul><button class="corporate-select" type="button">Bu kutu için teklif al <span>→</span></button></div></article>
+          <article class="corporate-box corporate-box-featured" data-box="Anadolu İyilik Kutusu" data-price="1290"><div class="corporate-ribbon">EN ÇOK TERCİH EDİLEN</div><div class="corporate-box-media corporate-box-media-anatolia"><span>50+ ADET</span></div><div class="corporate-box-body"><div class="corporate-box-top"><small>5 YEREL LEZZET</small><strong>1.290 TL’den</strong></div><h3>Anadolu İyilik Kutusu</h3><p>Tarhana, erişte, salça, reçel ve tahin. Bayram, yılbaşı ve çalışan bağlılığı programları için.</p><ul><li>Logo baskılı kutu bandı</li><li>İsimli kart ve toplu adresleme</li><li>Kurumsal etki özeti</li></ul><button class="corporate-select" type="button">Bu kutu için teklif al <span>→</span></button></div></article>
+          <article class="corporate-box" data-box="İyilik Sofrası Seçkisi" data-price="1890"><div class="corporate-box-media corporate-box-media-premium"><span>100+ ADET</span></div><div class="corporate-box-body"><div class="corporate-box-top"><small>7 YEREL LEZZET</small><strong>1.890 TL’den</strong></div><h3>İyilik Sofrası Seçkisi</h3><p>Geniş Anadolu seçkisi ve premium sunum. Üst düzey müşteri ve özel paydaş hediyeleri için.</p><ul><li>Kuruma özel kutu tasarımı</li><li>Çoklu adrese gönderim</li><li>Detaylı sosyal etki raporu</li></ul><button class="corporate-select" type="button">Bu kutu için teklif al <span>→</span></button></div></article>
+        </div>
+        <div class="corporate-calculator"><div class="corporate-calc-copy"><span class="eyebrow">ETKİNİZİ HEMEN GÖRÜN</span><h3>Kaç kişiye iyilik hediye edeceksiniz?</h3><p>Kutu ve adet seçin; siparişinizin oluşturacağı tahmini iyilik payını görün.</p></div><div class="corporate-calc-controls"><label>Kutu<select id="corporateBoxSelect"><option value="790">Sofra Başlangıç · 790 TL</option><option value="1290" selected>Anadolu İyilik · 1.290 TL</option><option value="1890">İyilik Sofrası · 1.890 TL</option></select></label><label>Adet<input id="corporateQty" type="number" min="25" max="10000" step="25" value="100"></label></div><div class="corporate-calc-result"><small>TAHMİNİ İYİLİK PAYI</small><strong id="corporateImpact">11.727,27 TL</strong><span id="corporateOrderTotal">129.000 TL tahmini sipariş</span></div></div>
+        <div class="corporate-foot"><div><b>Markanıza özel</b><span>Logo, kart ve kutu bandı seçenekleri</span></div><div><b>Türkiye geneli</b><span>Tek veya çoklu adrese planlı teslimat</span></div><div><b>Raporlanabilir etki</b><span>Sipariş sonrası kurumsal etki özeti</span></div><button class="btn primary" id="corporateGeneralQuote" type="button">Kurumsal teklif iste</button></div>
+      </div>
+    </section>
+
+    <section class="impact" id="etki"><div class="container center"><span class="eyebrow">ALIŞVERİŞTEN DAHA FAZLASI</span><h2>Sepetine eklediğin her ürün iyiliği büyütür.</h2><div class="steps"><article class="card"><b>01</b><h3>Sepetini doldur</h3><p>Sevdiğin ürünleri seç.</p></article><article class="card"><b>02</b><h3>Siparişini ver</h3><p>Güvenli ödeme adımına geç.</p></article><article class="card"><b>03</b><h3>Pay ayrılır</h3><p>KDV hariç, indirim sonrası ürün tutarının %10’unu biz ayırırız.</p></article><article class="card"><b>04</b><h3>İyilik çoğalır</h3><p>Destek sofralara ulaşır.</p></article></div><p class="goodwill-disclosure"><strong>Nasıl hesaplanır?</strong> İyilik payı, tamamlanan ve iade edilmemiş siparişlerde KDV hariç, indirim sonrası ürün tutarının %10’udur. Müşteriden ayrıca tahsil edilen bir bağış değildir; Loopi Makarna kendi gelirinden ayırır. Kargo hesaba dahil değildir.</p></div></section>
+
+    <section class="campaign-section" id="kampanyalar">
+      <div class="container">
+        <div class="campaign-section-head">
+          <div><span class="eyebrow">İYİLİĞİN NEREYE GİDİYOR?</span><h2>Aktif kampanyalar</h2><p>Her alışveriş, seçtiğin bir iyiliğe dönüşür. Destek verdiğin kampanyanın hedefini, büyüyen katkıyı ve ulaşılan sonucu şeffafça takip edebilirsin.</p></div>
+          <a href="#kampanyalar" class="campaign-all">Tüm kampanyaları gör →</a>
+        </div>
+        <div class="campaign-list" id="campaignList"></div>
+        <section class="campaign-successes hidden" id="campaignSuccesses" aria-labelledby="campaignSuccessTitle">
+          <div class="campaign-success-head"><span class="eyebrow">SONUCU GÖR</span><h3 id="campaignSuccessTitle">İyilik gerçekleşti</h3><p>Hedefine ulaşan kampanyaların gerçek sonuçlarını ve paylaşılan fotoğrafları burada görebilirsin.</p></div>
+          <div class="campaign-success-list" id="campaignSuccessList"></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="good-map-section" id="iyilik-haritasi">
+      <div class="container">
+        <div class="good-map-head">
+          <div><span class="eyebrow">BİR SOFRADAN DİĞERİNE</span><h2>İyilik nereden nereye ulaşıyor?</h2><p>Her onaylı sipariş, alışverişin yapıldığı şehirden İyilik Sofrası’nın ulaştığı şehre bir bağ kurar. Haritada bir şehre dokunarak iyiliğin yolunu görebilirsin.</p></div>
+          <div class="good-map-total"><small>İYİLİK SOFRASI FONU</small><strong id="mapGrandTotal">—</strong><span id="mapCityCount">—</span></div>
+        </div>
+        <div class="good-map-layout">
+          <div class="good-map-card card">
+            <div class="good-map-legend"><span><i class="map-dot map-dot-low"></i>Katkı veren şehir</span><span><i class="map-dot map-dot-high"></i>Yoğun katkı</span><span><i class="map-dot map-dot-destination"></i>Desteğin ulaştığı şehir</span></div>
+            <div id="turkeyMap" class="turkey-map" aria-label="İyiliğin şehirler arasındaki yolunu gösteren Türkiye haritası"></div>
+            <div id="mapSelectedCity" class="map-selected-city" aria-live="polite"><div><small>İYİLİĞİN YOLU</small><strong>Haritadan bir şehir seç</strong></div><span>Katkının hangi sofraya ulaştığını burada göreceksin.</span></div>
+          </div>
+          <aside class="map-ranking card">
+            <div class="map-ranking-head"><div><small>ŞEHİRLER ARASI DAYANIŞMA</small><h3>İyilik yolları</h3></div></div>
+            <div id="mapRanking"></div>
+            <div class="map-note">Harita, onaylı siparişler ve yayımlanan teslim sonuçlarıyla güncellenir.</div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="container story" id="hikaye">
+      <div class="story-art story-photo"><img src="assets/hikayemiz-sofra.webp" alt="Loopi Makarna tarhana, erişte, salça ve reçel sofrası"></div>
+      <div class="story-copy">
+        <span class="eyebrow">HİKAYEMİZ</span>
+        <h2>Bir sofradan daha fazlası.</h2>
+        <p><strong>Loopi Makarna</strong>, günlük alışverişlerin başka bir sofrada iyiliğe dönüşebileceği düşüncesiyle doğdu.</p>
+        <p>Her alışverişin bir bölümü sosyal fayda kampanyasına aktarılır; katkınızı görebilir ve sonucunu takip edebilirsiniz.</p>
+        <p><strong>Üreticiyi, müşteriyi ve iyilik hareketlerini aynı sofrada buluşturuyoruz.</strong></p>
+        <p class="story-signoff"><strong>Sen alışverişini yap.<br>İyilik sofraya yayılsın.</strong></p>
+        <a href="#urunler">Ürünleri keşfet →</a>
+      </div>
+    </section>
+
+    <details class="journey-details secondary-journey reviews-section" id="yorumlar">
+      <summary><span><b>Müşteri Yorumları</b><small>Ürünlerimizi satın alan müşterilerimizin deneyimlerini oku.</small></span><em>Yorumları gör <i>⌄</i></em></summary>
+      <div class="container">
+        <div class="reviews-head">
+          <div><h2>Sofralardan gelen geri bildirimler.</h2><p>Yalnızca ürünü satın alan üyelerimiz yorum bırakabilir; her yorum doğrulanmış bir alışverişe dayanır.</p></div>
+          <div class="reviews-score" id="reviewsScore"></div>
+        </div>
+        <div class="reviews-layout">
+          <div class="reviews-list" id="reviewsList"></div>
+          <div class="card review-form-card">
+            <span class="review-form-kicker">DENEYİMİNİ PAYLAŞ</span>
+            <h3>Yorum yaz</h3>
+            <form id="reviewForm">
+              <label>Ürün<select id="reviewProduct" required></select></label>
+              <label>Puanın<div class="star-picker" id="starPicker">
+                <button type="button" data-star="1" class="active">★</button>
+                <button type="button" data-star="2" class="active">★</button>
+                <button type="button" data-star="3" class="active">★</button>
+                <button type="button" data-star="4" class="active">★</button>
+                <button type="button" data-star="5" class="active">★</button>
+              </div></label>
+              <label>Yorumun<textarea class="input review-textarea" id="reviewText" minlength="5" maxlength="800" required></textarea></label>
+              <div class="review-form-foot"><small>Yalnızca satın aldığın ürünlere yorum yapabilirsin.</small><button class="btn primary" type="submit">Yorumu gönder</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <section class="faq-section" id="sss">
+      <div class="container faq-wrap">
+        <div class="faq-head"><span class="eyebrow">MERAK ETTİKLERİN</span><h2>Sık Sorulan Sorular</h2><p>Siparişten iyilik payına, kargodan iadeye kadar en çok sorulan soruların yanıtları burada.</p></div>
+        <div class="faq-list">
+          <details class="faq-item"><summary>Siparişim ne zaman hazırlanır ve kargoya verilir?<span>＋</span></summary><div class="faq-answer">Siparişin alındıktan sonra hazırlık süreci başlar. Güncel kargo durumunu hesabındaki sipariş geçmişinden <strong>Kargom Nerede?</strong> butonuyla takip edebilirsin.</div></details>
+          <details class="faq-item"><summary>İyilik payı nasıl oluşuyor?<span>＋</span></summary><div class="faq-answer">İyilik payı müşteriden ayrıca alınan bir bağış değildir. Loopi Makarna, tamamlanan ve iade edilmemiş siparişlerde KDV hariç, indirim sonrası ürün tutarının %10’unu kendi gelirinden ayırır; kargo bu hesaba dahil değildir. Kesin tutar ödeme sonrası İyiliklerim bölümünde görünür.</div></details>
+          <details class="faq-item"><summary>Destek olmak istediğim kampanyayı seçebilir miyim?<span>＋</span></summary><div class="faq-answer">Evet. Kampanya detayındaki <strong>Bu kampanyaya destek ol</strong> seçeneğini kullanabilir veya ödeme sırasında aktif kampanyalar arasından seçim yapabilirsin.</div></details>
+          <details class="faq-item"><summary>Ödeme ve sipariş onayını nasıl takip ederim?<span>＋</span></summary><div class="faq-answer">Sipariş tamamlandığında ekranda sipariş numaran ve destek olduğun kampanya gösterilir. Sistem yapılandırılmışsa sipariş bilgileri kayıtlı e-posta adresine de gönderilir.</div></details>
+          <details class="faq-item"><summary>Üyelik bilgilerimi ve teslimat adresimi değiştirebilir miyim?<span>＋</span></summary><div class="faq-answer">Evet. Hesabım bölümünden ad-soyad, telefon, şehir, ilçe ve açık adres bilgilerini güncelleyebilirsin.</div></details>
+          <details class="faq-item"><summary>İade veya değişim yapmak istersem ne yapmalıyım?<span>＋</span></summary><div class="faq-answer">İade veya değişim talebin için Loopi Makarna destek ekibiyle iletişime geçebilirsin. Ürünün durumu ve sipariş bilgilerin incelendikten sonra süreç hakkında sana bilgi verilir.</div></details>
+          <details class="faq-item"><summary>Kargom Nerede? özelliği nasıl çalışıyor?<span>＋</span></summary><div class="faq-answer">Siparişine takip numarası tanımlandığında <strong>Kargom Nerede?</strong> ekranından kargo firması, takip numarası, güncel durum ve mevcutsa son kargo hareketlerini görebilirsin.</div></details>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="iletisim" class="site-footer-v2">
+    <div class="container footer-main-v2">
+      <section class="footer-column"><h3>KURUMSAL</h3><nav><a href="#hikaye">Hakkımızda</a><a href="#iletisim">İletişim</a><a href="#kampanyalar">İyilik Kampanyaları</a><a href="#iyilik-haritasi">İyilik Haritası</a><a href="#sss">Sık Sorulan Sorular</a><a href="iade.php">İade ve İptal Koşulları</a></nav></section>
+      <section class="footer-column"><h3>ALIŞVERİŞ</h3><nav><a href="mesafeli-satis.php">Mesafeli Satış Sözleşmesi</a><a href="gizlilik.php">Gizlilik ve Güvenlik</a><a href="iade.php">İptal ve İade Şartları</a><a href="kvkk.php">Kişisel Verilerin Korunması</a><a href="#urunler">Dükkan</a><a href="#sss">Sıkça Sorulan Sorular</a></nav></section>
+      <section class="footer-column"><h3>ÜYELİK</h3><nav><a href="#" id="footerSignupLink">Yeni Üyelik</a><a href="#" id="footerLoginLink">Üye Girişi</a><a href="reset-password.php">Şifremi Unuttum</a><a href="#" id="footerCartLink">Sepetim</a><a href="#" id="footerOrdersLink">Sipariş Takibi</a></nav></section>
+      <section class="footer-column footer-follow"><h3>BİZİ TAKİP EDİN</h3><nav class="footer-social-list"><a href="https://www.instagram.com/iyilikmutfagieregli/" target="_blank" rel="noopener noreferrer"><span>◎</span>Instagram</a><a href="#" data-social-share="facebook"><span>f</span>Facebook</a><a href="#" data-social-share="x"><span>𝕏</span>X</a><a href="#" data-social-share="whatsapp"><span>◉</span>WhatsApp</a></nav><img class="footer-qr" src="assets/instagram-qr.png" alt="Loopi Makarna Instagram QR kodu"><small>Instagram hesabımızı takip edin.</small></section>
+      <section class="footer-column footer-newsletter"><h3>E-Bültene Kayıt Ol!</h3><p>Fırsatları, yeni ürünleri ve iyilik hikâyelerini ilk siz öğrenin.</p><form id="newsletterForm"><input required type="email" placeholder="E-posta adresinizi yazınız" aria-label="E-posta adresi"><button type="submit">EKLE</button></form><h4>Bizi Takip Edin</h4><div class="footer-social-icons"><a href="#" data-social-share="facebook" aria-label="Facebook">f</a><a href="https://www.instagram.com/iyilikmutfagieregli/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a><a href="#" data-social-share="x" aria-label="X">𝕏</a><a href="#" data-social-share="whatsapp" aria-label="WhatsApp">◉</a></div></section>
+    </div>
+
+    <div class="container footer-bottom-v2"><div>© 2026 Loopi Makarna. Tüm hakları saklıdır.</div><div class="footer-legal"><a href="kvkk.php">KVKK</a><a href="gizlilik.php">Gizlilik</a><a href="mesafeli-satis.php">Mesafeli Satış</a><a href="iade.php">İade</a></div><div class="payment-badges" aria-label="Desteklenen ödeme kartları"><span class="visa">VISA</span><span class="mastercard"><i></i><i></i></span><span class="troy">troy</span></div></div>
+  </footer>
+  <button class="floating-wa" type="button" data-social-share="whatsapp" aria-label="WhatsApp'ta paylaş" title="WhatsApp">◉</button>
+
+  <div class="drawer-shell hidden" id="drawerShell"><button class="scrim" id="closeDrawerScrim"></button><aside class="drawer"><div class="drawer-head"><h2>Sepetin (<span id="drawerCount">0</span>)</h2><button class="icon-btn" id="closeDrawer">✕</button></div><div id="cartBody"></div></aside></div>
+
+
+  <div class="modal-shell hidden" id="productDetailModal">
+    <div class="modal product-detail-modal">
+      <button class="modal-close" id="closeProductDetail" aria-label="Ürün detayını kapat">✕</button>
+      <div id="productDetailContent"></div>
+    </div>
+  </div>
+
+  <div class="modal-shell hidden" id="checkoutModal"><div class="modal"><button class="modal-close" id="closeCheckout">✕</button><div id="checkoutContent"></div></div></div>
+
+  <div class="modal-shell hidden" id="goodHistoryModal"><div class="modal good-history-modal"><button class="modal-close" id="closeGoodHistory">✕</button><div id="goodHistoryContent"></div></div></div>
+
+  <div class="modal-shell hidden" id="trackingModal"><div class="modal tracking-modal"><button class="modal-close" id="closeTrackingModal" aria-label="Kapat">✕</button><div id="trackingContent"></div></div></div>
+
+  <div class="modal-shell hidden" id="campaignModal">
+    <div class="modal campaign-modal">
+      <button class="modal-close" id="closeCampaignModal" aria-label="Kapat">✕</button>
+      <div id="campaignModalContent"></div>
+    </div>
+  </div>
+
+  <div class="modal-shell hidden" id="memberModal">
+    <div class="modal member-modal">
+      <button class="modal-close" id="closeMemberModal" aria-label="Kapat">✕</button>
+      <div id="memberContent"></div>
+    </div>
+  </div>
+  <div class="modal-shell hidden" id="corporateModal"><div class="modal corporate-modal"><button class="modal-close" id="closeCorporateModal" aria-label="Kurumsal teklif formunu kapat">✕</button><div class="corporate-form-head"><span class="eyebrow">KURUMSAL TEKLİF</span><h2>İyiliği birlikte planlayalım.</h2><p>Kutu içeriği, markalama ve teslimat planına göre size özel teklif hazırlayalım.</p></div><form id="corporateQuoteForm" class="corporate-quote-form"><div class="two"><label>Firma adı<input class="input" id="cqCompany" maxlength="190" required></label><label>Yetkili kişi<input class="input" id="cqName" maxlength="120" required></label></div><div class="two"><label>Kurumsal e-posta<input class="input" id="cqEmail" type="email" maxlength="190" required></label><label>Telefon<input class="input" id="cqPhone" maxlength="40" required></label></div><div class="two"><label>Kutu seçimi<select id="cqBox"><option>Sofra Başlangıç Kutusu</option><option selected>Anadolu İyilik Kutusu</option><option>İyilik Sofrası Seçkisi</option><option>Özel içerik çalışması</option></select></label><label>Tahmini adet<input class="input" id="cqQty" type="number" min="25" max="10000" value="100" required></label></div><label>Planlanan teslim tarihi<input class="input" id="cqDate" type="date"></label><label>Notunuz<textarea class="input corporate-notes" id="cqNotes" maxlength="1200" placeholder="Markalama, teslimat şehirleri veya özel içerik beklentinizi yazabilirsiniz."></textarea></label><label class="form-check"><input type="checkbox" required><span><a href="kvkk.php" target="_blank">KVKK aydınlatma metnini</a> okudum; teklif talebim için iletişime geçilmesini kabul ediyorum.</span></label><button class="btn primary full" type="submit">Teklif talebini gönder</button></form></div></div>
+  <div class="modal-shell hidden" id="subscriptionModal"><div class="modal subscription-modal"><button class="modal-close" id="closeSubscriptionModal" aria-label="Abonelik formunu kapat">✕</button><div class="corporate-form-head"><span class="eyebrow">İYİLİK ABONELİĞİ</span><h2>Her teslimatta iyiliği büyüt.</h2><p>Planını ve teslimat sıklığını seç. Kart bilgilerin Loopi Makarna'nda saklanmaz.</p></div><form id="subscriptionForm" class="corporate-quote-form"><div class="two"><label>Plan<select id="subPlan"><option value="mini">Başlangıç Kutusu · 749 TL</option><option value="standard" selected>Anadolu İyilik Kutusu · 1.099 TL</option><option value="family">Aile Sofrası Kutusu · 1.499 TL</option></select></label><label>Teslimat sıklığı<select id="subFrequency"><option value="monthly">Her ay</option><option value="bimonthly">İki ayda bir</option></select></label></div><label>İlk teslimat tarihi<input class="input" id="subStartDate" type="date" required></label><label>Destek olmak istediğin kampanya<select id="subCampaign" required></select></label><label class="form-check"><input type="checkbox" required><span><a href="mesafeli-satis.php" target="_blank">Abonelik ve mesafeli satış koşullarını</a> okudum. Aboneliğimi hesabımdan duraklatabileceğimi veya iptal edebileceğimi biliyorum.</span></label><div class="subscription-payment-note">İlk ödeme ve tekrarlayan ödeme yetkisi, güvenli ödeme ekranında tamamlanır. Canlı ödeme yetkisi kapalıysa aboneliğin “ödeme kurulumu bekliyor” olarak kaydedilir.</div><button class="btn primary full" type="submit">Abonelik kaydını oluştur</button></form></div></div>
+  <div class="toast hidden" id="toast">E-posta listemize katıldın. Teşekkürler!</div>
+  <script src="map-data.js"></script>
+  <script src="app.js"></script>
+  <script src="site-ui.js"></script>
+</body>
+</html>

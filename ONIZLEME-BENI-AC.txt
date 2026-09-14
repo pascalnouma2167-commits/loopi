@@ -1,0 +1,12 @@
+İYİLİK MUTFAĞI — TASARIM ÖNİZLEMESİ
+
+1) ZIP'i bilgisayarına çıkar.
+2) index.html dosyasına çift tıkla.
+3) Site tarayıcıda açılır.
+
+Bu index.html yalnızca tasarım ve ön yüz geliştirmesi içindir.
+Ürün kartları, kampanyalar, harita, sepet ve modallar görülebilir.
+Gerçek üyelik, admin, veritabanı, e-posta, ödeme ve kargo işlemleri için index.php üzerinden PHP/MySQL sunucusu gerekir.
+
+Yeni eklemek istediğin tasarım/özellikleri bu önizleme üzerinden birlikte geliştirebiliriz.
+Canlı sürüm dosyaları aynı pakette korunmuştur.
