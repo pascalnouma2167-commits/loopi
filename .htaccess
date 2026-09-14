@@ -1,0 +1,21 @@
+Options -Indexes
+DirectoryIndex index.php
+
+RewriteEngine On
+RewriteRule ^robots\.txt$ robots.php [L]
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+# Uygulamanın özel klasörleri web üzerinden açılamaz.
+RewriteRule ^(?:app|bin|database|storage)(?:/|$) - [F,L,NC]
+
+# Yapılandırma / dokümantasyon / SQL dosyalarının doğrudan indirilmesini engelle.
+<FilesMatch "^(?:config(?:\.example)?\.php|composer\.(?:json|lock)|.*\.(?:sql|md)|deploy-nginx\.example\.conf)$">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), camera=(), microphone=()"
+</IfModule>

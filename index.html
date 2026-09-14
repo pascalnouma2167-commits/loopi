@@ -166,35 +166,6 @@
       </div>
     </section>
 
-    <details class="journey-details secondary-journey reviews-section" id="yorumlar">
-      <summary><span><b>Müşteri Yorumları</b><small>Ürünlerimizi satın alan müşterilerimizin deneyimlerini oku.</small></span><em>Yorumları gör <i>⌄</i></em></summary>
-      <div class="container">
-        <div class="reviews-head">
-          <div><h2>Sofralardan gelen geri bildirimler.</h2><p>Yalnızca ürünü satın alan üyelerimiz yorum bırakabilir; her yorum doğrulanmış bir alışverişe dayanır.</p></div>
-          <div class="reviews-score" id="reviewsScore"></div>
-        </div>
-        <div class="reviews-layout">
-          <div class="reviews-list" id="reviewsList"></div>
-          <div class="card review-form-card">
-            <span class="review-form-kicker">DENEYİMİNİ PAYLAŞ</span>
-            <h3>Yorum yaz</h3>
-            <form id="reviewForm">
-              <label>Ürün<select id="reviewProduct" required></select></label>
-              <label>Puanın<div class="star-picker" id="starPicker">
-                <button type="button" data-star="1" class="active">★</button>
-                <button type="button" data-star="2" class="active">★</button>
-                <button type="button" data-star="3" class="active">★</button>
-                <button type="button" data-star="4" class="active">★</button>
-                <button type="button" data-star="5" class="active">★</button>
-              </div></label>
-              <label>Yorumun<textarea class="input review-textarea" id="reviewText" minlength="5" maxlength="800" required></textarea></label>
-              <div class="review-form-foot"><small>Yalnızca satın aldığın ürünlere yorum yapabilirsin.</small><button class="btn primary" type="submit">Yorumu gönder</button></div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </details>
-
     <section class="faq-section" id="sss">
       <div class="container faq-wrap">
         <div class="faq-head"><span class="eyebrow">MERAK ETTİKLERİN</span><h2>Sık Sorulan Sorular</h2><p>Siparişten iyilik payına, kargodan iadeye kadar en çok sorulan soruların yanıtları burada.</p></div>
@@ -240,6 +211,7 @@
   <div class="modal-shell hidden" id="trackingModal"><div class="modal tracking-modal"><button class="modal-close" id="closeTrackingModal" aria-label="Kapat">✕</button><div id="trackingContent"></div></div></div>
 
   <div class="modal-shell hidden" id="campaignModal">
+    <form id="reviewForm" hidden aria-hidden="true"></form>
     <div class="modal campaign-modal">
       <button class="modal-close" id="closeCampaignModal" aria-label="Kapat">✕</button>
       <div id="campaignModalContent"></div>
